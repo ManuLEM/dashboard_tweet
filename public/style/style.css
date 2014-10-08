@@ -78,7 +78,8 @@ aside li[data-used='true'] {
 }
 article {
     border-bottom: 1px solid #d8d8d8;
-    padding-bottom: 20px
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 article h2, article h4 {
     font-weight: normal;
