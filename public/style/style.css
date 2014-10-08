@@ -57,7 +57,7 @@ aside ul {
     padding: 0;
     width: 100%;
 }
-li {
+aside li {
     color: #55acee;
     background-color: #ffffff;
     list-style-type: none;
@@ -67,7 +67,7 @@ li {
     border-bottom: 1px solid #55acee;
     box-sizing: border-box;
 }
-li[data-used='true'] {
+aside li[data-used='true'] {
     color: #ffffff;
     background-color: #55acee;
     border-bottom: 1px solid #ffffff;
@@ -76,8 +76,20 @@ li[data-used='true'] {
     margin-left: 250px;
     padding: 10px 20px;
 }
-article h2 {
+article h2, article h4 {
     font-weight: normal;
     margin: 0 0 10px 0;
+    color: #55acee;
+}
+article ul {
+    margin: 0;
+    padding: 0;
+}
+article li {
+    list-style-type: none;
+    width: 19.5%;
+    display: inline-block;
+}
+article span {
     color: #55acee;
 }
