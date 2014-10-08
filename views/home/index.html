@@ -19,12 +19,12 @@
                 <h2>#<%= tags[i].name %></h2>
                 <h4>Speed</h4>
                 <% if (tags[i].rate > 60) { %>
-                    <p><%= (tags[i].rate / 60).toFixed(2) %> tweets / minutes</p>
+                    <p id="rate"><%= (tags[i].rate / 60).toFixed(2) %> tweets / minutes</p>
                 <% } else { %>
-                    <p><%= tags[i].rate %> tweets / seconds</p>
+                    <p id="rate"><%= tags[i].rate %> tweets / seconds</p>
                 <% } %>
                 <h4>Languages</h4>
-                <ul>
+                <ul id="languages">
                     <% for (var lang in tags[i].languageRatios) { %>
                         <li><span><%= lang %></span>: <%= tags[i].languageRatios[lang] %>%</li>
                     <% } %>
