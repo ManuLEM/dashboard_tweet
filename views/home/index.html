@@ -17,6 +17,11 @@
         <% if (tags[i].used) { %>
             <article data-index='<%= i %>'>
                 <h2>#<%= tags[i].name %></h2>
+                <% if (tags[i].rate > 60) { %>
+                    <p><%= (tags[i].rate / 60).toFixed(2) %> tweets / minutes</p>
+                <% } else { %>
+                    <p><%= tags[i].rate %> tweets / seconds</p>
+                <% } %>
             </article>
         <% } %>
     <% } %>
