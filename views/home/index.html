@@ -1,0 +1,23 @@
+<header>
+    <h1>Search for a tag</h1>
+</header>
+<form action="/add-tags" method="post" id="tagForm">
+    <input type="text" placeholder="Add tags, separated by comas" name="tags">
+    <i id="submit" class="fa fa-search"></i>
+</form>
+<aside>
+    <ul id="tags">
+    <% for (var i = 0; i < tags.length; i++){ %>
+        <li data-index='<%= i %>' data-used='<%= tags[i].used %>' class="tag">#<%= tags[i].name %></li>
+    <% } %>
+    </ul>
+</aside>
+<section id="stats">
+    <% for (var i = 0; i < tags.length; i++){ %>
+        <% if (tags[i].used) { %>
+            <article data-index='<%= i %>'>
+                <h2>#<%= tags[i].name %></h2>
+            </article>
+        <% } %>
+    <% } %>
+</section>
